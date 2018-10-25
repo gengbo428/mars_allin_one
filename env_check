@@ -21,3 +21,8 @@ if [ -n "$dhcp_listen_port" ]
 then 
  echo "There is process litent port 67"
 fi
+
+of_listen_port=$(netstat -tunlp |grep -w 6653)
+if [ -n "$of_listen_port" ]; then
+  echo "There is process listen port 6653"
+fi
